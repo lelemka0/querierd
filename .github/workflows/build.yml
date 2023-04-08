@@ -55,3 +55,8 @@ jobs:
         with:
           name: querierd-test-${{ matrix.compiler }}
           path: test/*
+      - name: Upload Binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: querierd-binary-${{ matrix.compiler }}
+          path: tmp/*
